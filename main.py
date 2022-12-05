@@ -1,21 +1,14 @@
-# # print("Halo dunia!")
-# import pandas as pd
-# # df = pd.read_excel("data.xlsx")
-# dfs = pd.read_excel("data.xlsx", sheet_name=None)
-# # df = pd.read_csv('data.xlsx')
-# # In [2]: titanic = pd.read_csv("data/titanic.csv")
-# # df["Duration"] = df["Duration"].replace({60: 10})
-# # df["Pulse"] = df["Pulse"].replace({110: 9}) 
-
-# # print(dfs.head(1))
-
 import pandas as pd
 
+df = pd.read_excel('data2.xlsx', sheet_name='Sheet1')
 
 
-dfs = pd.read_excel("data.xlsx", sheet_name=None)
- 
+# df["Jumlah_Penduduk"] = df["Jumlah_Penduduk"].replace({"15 juta": 10})
+# df["Pendapatan_Harian"] = df["Pendapatan_Harian"].replace({"500 ribu": 9})
 
-# df = pd.DataFrame(dict)
-
-print(dfs)
+# print(df.head(1))
+df.to_excel('saved_file.xlsx', index = False)
+# for i in df.index:
+#     print("Kota: "+df['Kota'][i])
+#     print("Jumlah Penduduk: "+df['Jumlah_Penduduk'][i])
+#     print("Pendapatan Harian: "+df['Pendapatan_Harian'][i])
